@@ -3,14 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="screenPrimary">#585B6A</color>
-    <color name="mapViewBottomButton">#13B5CC</color>
-    <color name="red">#EA0C22</color>
-    <color name="gray">#939091</color>
-    <color name="blue">#4F9796</color>
-    <color name="black">#242D2D</color>
-    <color name="mediaBackground">#485C7F</color>
-    <color name="white_plus">#f1f1f2</color>
     <color name="textSelect">#fff</color>
     <color name="textNoSelect">#978484</color>
     <color name="splitLine">#0df9ca</color>

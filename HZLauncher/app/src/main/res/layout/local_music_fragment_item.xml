@@ -2,9 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical"
-    >
-    <com.ofilm.android.hozonlauncher.ui.AlwaysMarqueeTextView
+    android:padding="15px">
+    <of.media.hz.ui.AlwaysMarqueeTextView
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
         android:id="@+id/musicTitle"
@@ -20,7 +19,7 @@
         android:focusable="true"
         android:textStyle="bold"
         android:textColor="@android:color/white"/>
-    <com.ofilm.android.hozonlauncher.ui.AlwaysMarqueeTextView
+    <of.media.hz.ui.AlwaysMarqueeTextView
         android:layout_marginTop="10px"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
@@ -39,12 +38,12 @@
         android:textColor="@android:color/white"/>
     <LinearLayout
         android:layout_marginTop="20px"
-        android:layout_width="250px"
-        android:layout_height="250px"
+        android:layout_width="300px"
+        android:layout_height="300px"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
         >
-        <com.ofilm.android.hozonlauncher.ui.RoundImageView
+        <of.media.hz.ui.RoundImageView
             android:id="@+id/musicAlbum"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -55,7 +54,7 @@
             android:layout_height="match_parent"
             android:id="@+id/musicLyric"
             android:divider="@null"
-            android:layout_gravity="center"
+
             />
     </LinearLayout>
 
@@ -75,8 +74,8 @@
             />
         <ImageView
             android:id="@+id/playImageView"
-            android:layout_marginLeft="70px"
-            android:layout_marginRight="70px"
+            android:layout_marginLeft="140px"
+            android:layout_marginRight="140px"
             android:clickable="true"
             android:layout_width="95px"
             android:layout_height="95px"
@@ -95,8 +94,8 @@
         android:layout_marginTop="20px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40px"
-        android:paddingRight="40px"
+        android:paddingLeft="120px"
+        android:paddingRight="120px"
         >
         <TextView
             android:id="@+id/musicCurrentPosition"
