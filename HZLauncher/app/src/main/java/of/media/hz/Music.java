@@ -36,18 +36,16 @@ public class Music implements Parcelable{
 		this.lrcpath = lrcpath;
 	}
 
-
-
 	protected Music(Parcel in) {
-        this.id = in.readInt();
-        this.title = in.readString();
-        this.uri = in.readString();
-        this.length = in.readInt();
-        this.image = in.readString();
-        this.artist = in.readString();
-        this.lrcpath = in.readString();
-        this.Album=in.readString();
-        this.duration=in.readLong();
+		this.id = in.readInt();
+		this.title = in.readString();
+		this.uri = in.readString();
+		this.length = in.readInt();
+		this.image = in.readString();
+		this.artist = in.readString();
+		this.lrcpath = in.readString();
+		this.Album=in.readString();
+		this.duration=in.readLong();
 	}
 	public static final Creator<Music> CREATOR = new Creator<Music>() {
 		@Override

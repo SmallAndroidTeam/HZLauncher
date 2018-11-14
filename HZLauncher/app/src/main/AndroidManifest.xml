@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="of.media.hz">
+    package="com.ofilm.android.hozonlauncher">
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,34 +10,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="of.media.hz.activity.LoadingActivity"
-            android:configChanges="screenSize|orientation|keyboardHidden"
-            android:screenOrientation="landscape"
-            android:enabled="true"
-            android:exported="true">
+        android:theme="@style/Theme">
+        <activity android:name="com.ofilm.android.hozonlauncher.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="of.media.hz.activity.MainActivity"
-            android:configChanges="screenSize|orientation|keyboardHidden"
-            android:screenOrientation="landscape">
-
-        </activity>
-
-        <service
-            android:name=".services.MusicAidlService"
-            android:enabled="true"
-            android:exported="true"
-            android:process=":remote">
-            <intent-filter>
-                <action android:name="com.android.oflim.action" />
-
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER_APP" />
             </intent-filter>
-        </service>
+        </activity>
     </application>
 
 </manifest>

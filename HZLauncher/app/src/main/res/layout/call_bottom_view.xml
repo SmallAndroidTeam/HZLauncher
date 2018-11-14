@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:id="@+id/media_bottom_view_id"
+    >
+
+    <Button android:id="@+id/media_back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@mipmap/call_receiver"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button android:id="@+id/media_forward_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@mipmap/call_reject"
+        />
+
+</LinearLayout>
