@@ -55,6 +55,7 @@
             android:layout_height="match_parent"
             android:id="@+id/musicLyric"
             android:divider="@null"
+            android:scrollbars="none"
             android:layout_gravity="center"
             />
     </LinearLayout>

@@ -95,7 +95,12 @@ public class LocalMusicFragment extends Fragment implements View.OnClickListener
                                 Glide.with(Objects.requireNonNull(getContext())).load(music.getImage()).into(musicAlbum);
                             }else if(new File(music.getImage()).exists()){//如果是本地图片，且对应地址的文件存在
                                 Bitmap bitmap = MusicIconLoader.getInstance().load(music.getImage());
-                                musicAlbum .setImageBitmap(bitmap);
+                                if(bitmap!=null){
+                                    musicAlbum .setImageBitmap(bitmap);
+                                }else{
+                                    musicAlbum.setImageResource(R.drawable.mp1);
+                                }
+
                             }else{//对应地址的文件不存在
                                    musicAlbum.setImageResource(R.drawable.mp1);
                             }
@@ -187,7 +192,11 @@ public class LocalMusicFragment extends Fragment implements View.OnClickListener
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.local_music_fragment_item, container,false);
+        noLrcs.add("     ");
+        noLrcs.add("     ");
         noLrcs.add("暂无歌词");
+        noLrcs.add("     ");
+        noLrcs.add("     ");
         initView(view);
         initEvents();
         bindService();
@@ -228,8 +237,11 @@ public class LocalMusicFragment extends Fragment implements View.OnClickListener
         try {
             if(musicController!=null) {
                 if (musicController.of_getCurrentPlayMusicAllLyric().size() != 0) {
-                    if(lryicAdapter.getmLrcs().containsAll(musicController.of_getCurrentPlayMusicAllLyric()))
-                    lryicAdapter.setmLrcs(musicController.of_getCurrentPlayMusicAllLyric());
+                    if(!lryicAdapter.getmLrcs().containsAll(musicController.of_getCurrentPlayMusicAllLyric()))
+                    {
+                        lryicAdapter.setmLrcs(musicController.of_getCurrentPlayMusicAllLyric());
+                        mhandler.sendEmptyMessage(UPDATE_LRYIC);
+                    }
                     if (lryicAdapter.getIndex() != musicController.of_getCurrentPlayMusicOneLyricIndex()) {
                         lryicAdapter.setIndex(musicController.of_getCurrentPlayMusicOneLyricIndex());
                         mhandler.obtainMessage(UPDATE_LRYIC,musicController.of_getCurrentPlayMusicOneLyricIndex()).sendToTarget();
@@ -343,7 +355,7 @@ public class LocalMusicFragment extends Fragment implements View.OnClickListener
     private MusicListChangeListener musicListChangeListener=new MusicListChangeListener.Stub() {//音乐列表改变监听
         @Override
         public void musicListChangeListener(boolean result) throws RemoteException {
-            Log.i("hz11111111", "musicListChangeListener: "+result);
+
         }
     };
     private ServiceConnection serviceConnection= new ServiceConnection() {
