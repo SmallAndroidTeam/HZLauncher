@@ -12,7 +12,7 @@ import com.ofilm.android.hozonlauncher.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import of.media.hz.Music;
+import of.media.hz.bean.Music;
 
 
 public class MusicListAdapter extends BaseAdapter {

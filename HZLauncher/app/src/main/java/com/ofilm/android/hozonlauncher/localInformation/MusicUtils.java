@@ -6,7 +6,7 @@ import android.util.Log;
 import java.io.File;
 import java.util.ArrayList;
 
-import of.media.hz.Music;
+import of.media.hz.bean.Music;
 
 /**
  * 2015年8月15日 16:34:37

@@ -46,10 +46,10 @@ import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import of.media.hz.Music;
-import of.media.hz.MusicController;
-import of.media.hz.MusicListChangeListener;
-import of.media.hz.MusicPlayProgressListener;
+import of.media.hz.bean.Music;
+import of.media.hz.service.IMusicService;
+import of.media.hz.service.MusicListChangeListener;
+import of.media.hz.service.MusicPlayProgressListener;
 
 
 /**
@@ -67,7 +67,7 @@ public class LocalMusicFragment extends Fragment implements View.OnClickListener
     private TextView musicDuration;
     private SeekBar musicSeekbar;
 
-    private MusicController musicController;
+    private IMusicService musicController;
     private final static String TAG="hz11111";
     private TextView musicArtist;
     private final static int INIT_UI=0;//初始化播放Ui界面
@@ -362,7 +362,7 @@ public class LocalMusicFragment extends Fragment implements View.OnClickListener
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             Log.i("ha11111", "服务连接成功 ");
-            musicController= MusicController.Stub.asInterface(iBinder);
+            musicController= IMusicService.Stub.asInterface(iBinder);
 
             try {
 

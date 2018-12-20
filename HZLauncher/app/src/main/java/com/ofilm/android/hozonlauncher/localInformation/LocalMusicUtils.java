@@ -6,7 +6,7 @@ import android.provider.MediaStore;
 
 import java.util.ArrayList;
 
-import of.media.hz.Music;
+import of.media.hz.bean.Music;
 
 
 /**

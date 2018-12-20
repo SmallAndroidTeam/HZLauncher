@@ -1,12 +1,9 @@
-package of.media.hz;
+package of.media.hz.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/**
- * 2015年8月15日 16:34:37
- * 博文地址：http://blog.csdn.net/u010156024
- */
+
 public class Music implements Parcelable{
 	// id title singer data time image
 	private int id; // 音乐id
